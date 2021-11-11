@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <div *ngIf="listado.length > 0">
+ 
+    <h1 class="ion-text-center">Listado de usuarios</h1>
+    <ion-item>
+      <ion-label><h1>id</h1></ion-label>
+      <ion-label><h1>name</h1></ion-label>
+      <ion-label><h1>username</h1></ion-label>
+      <ion-label><h1>email</h1></ion-label>
+      <ion-label><h1>website</h1></ion-label>
+      <ion-label><h1>phone</h1></ion-label>
+    </ion-item>
+    <ion-list>
+      <div *ngFor="let aux of listado">
+        
+        <ion-item>
+
+          <ion-label>{{aux.id}}</ion-label>
+          <ion-label>{{aux.name}}</ion-label>
+          <ion-label>{{aux.username}}</ion-label>
+          <ion-label>{{aux.email}}</ion-label>
+          <ion-label>{{aux.website}}</ion-label>
+          <ion-label>{{aux.phone}}</ion-label>
+        </ion-item>
+
+          <hr>
+      </div>
+      </ion-list>  
+  </div>
+
+
+</ion-content>
+
+<footer>
+  <ion-button (click)="listar()" expand="block" fill="clear" shape="round">
+    Listar API
+  </ion-button>
+
+</footer>
