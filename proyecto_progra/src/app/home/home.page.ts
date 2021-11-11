@@ -1,12 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ApirestService } from '../apirest.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  datos: any
 
-  constructor() {}
+  constructor(private activatedRouter : ActivatedRoute, 
+              private api : ApirestService) { }
 
+ngOnInit() {    
+  this.leer();
+}
+
+async leer()
+{    
+  let id ="";
+  this.activatedRouter.paramMap.subscribe(async param => {
+    id = param.get('id');
+  })
+  
+  await this.api.getUser(id);
+  this.datos =  this.api.datos;
+  console.log(this.datos);
+}
 }
