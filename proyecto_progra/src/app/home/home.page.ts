@@ -9,16 +9,17 @@ import { ApirestService } from '../apirest.service';
 })
 export class HomePage implements OnInit {
   datos: any
-
+  user = "";
   constructor(private activatedRouter : ActivatedRoute, 
               private api : ApirestService) { }
 
 ngOnInit() {    
-  this.leer();
+  this.leer()
 }
-
 async leer()
-{    
+{if (this.datos == this.datos)
+  {
+  
   let id ="";
   this.activatedRouter.paramMap.subscribe(async param => {
     id = param.get('id');
@@ -26,6 +27,10 @@ async leer()
   
   await this.api.getUser(id);
   this.datos =  this.api.datos;
-  console.log(this.datos);
+  localStorage.setItem(id,JSON.stringify(this.datos))
+  console.log(this.datos);}
+  
+  alert(this.datos.name)
+
 }
 }

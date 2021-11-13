@@ -5,19 +5,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApirestService {
-  listado = []
+  listadoApi = []
   datos : any
   private apiURL = 'https://jsonplaceholder.typicode.com/';
   constructor(private http: HttpClient) { }
   // metodo para leer 
   getUsers()
   {
-    this.listado = []
+    this.listadoApi = []
     let url = this.apiURL + "users";
     return new Promise((resolve, reject) => {
       this.http.get(url).subscribe((data: []) =>{
         resolve(data);
-        data.forEach(item => {this.listado.push(item)});
+        data.forEach(item => {this.listadoApi.push(item)});
         //console.table(this.listado);
       },
       error =>

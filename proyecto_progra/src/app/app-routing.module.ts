@@ -12,13 +12,14 @@ const routes: Routes = [
     path: 'usuarios',
     loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
   },{
-    path: ':id',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   }
+  
 ];
 
 @NgModule({

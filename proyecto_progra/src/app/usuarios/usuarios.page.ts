@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApirestService } from '../apirest.service';
 
+
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.page.html',
@@ -8,7 +9,7 @@ import { ApirestService } from '../apirest.service';
 })
 export class UsuariosPage implements OnInit {
   
-  listado=[];
+  listadoUsuarios=[];
   constructor(private api: ApirestService) { }
 
   ngOnInit() {
@@ -17,9 +18,11 @@ export class UsuariosPage implements OnInit {
 
   listar(){
     this.api.getUsers();
-    this.listado= this.api.listado;
-    console.log(this.listado)
+    this.listadoUsuarios= this.api.listadoApi;
+    console.log(this.listadoUsuarios)
   }
-
+enviar(){
+  
+}
 
 }
