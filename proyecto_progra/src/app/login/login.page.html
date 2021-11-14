@@ -4,6 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-text-center">
 
+  <ion-input type="text" placeholder="Ingrese Nombre de Usuario" #dato></ion-input>
+  <ion-input type="text" placeholder="Ingrese Password" #password></ion-input>
+  <ion-button (click)="leer(dato,password)" expand="block" fill="clear" shape="round">
+    login
+  </ion-button>
 </ion-content>

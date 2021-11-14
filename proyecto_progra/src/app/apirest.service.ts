@@ -27,9 +27,9 @@ export class ApirestService {
     })
   }
 
-  async getUser(id:String)
+  async getUser(username:String)
   {
-    let url = this.apiURL + "users/" + id;
+    let url = this.apiURL + "users/" + username;
     return new Promise((resolve, reject) => {
       this.http.get(url).subscribe((data: any) =>{
         resolve(data);
