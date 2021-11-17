@@ -40,12 +40,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
   await this.api.getUser(id)
   this.datos =  this.api.datos;
   localStorage.setItem(dato.value,JSON.stringify(this.datos))
-  console.log(this.datos)
+ // console.log(this.datos)
 
 
   await this.api.getPost(id)
   this.datos =  this.api.datos;
-  console.log(this.datos)
+  //console.log(this.datos)
 
   this.router.navigateByUrl('listadoposts');
 
@@ -65,11 +65,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+   // console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+   // console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -86,11 +86,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+   // console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+   // console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
 
@@ -108,11 +108,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+    //console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+   // console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -129,11 +129,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+    //console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+    //console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -150,11 +150,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+    //console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+    //console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -171,11 +171,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+    //console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+  //  console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -192,11 +192,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+    //console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+    //console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -213,11 +213,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+  //  console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+   // console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
     }
@@ -234,11 +234,11 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     await this.api.getUser(id)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
-    console.log(this.datos)
+    //console.log(this.datos)
 
     await this.api.getPost(id)
     this.datos =  this.api.datos;
-    console.log(this.datos)
+    //console.log(this.datos)
   
     this.router.navigateByUrl('listadoposts');
 

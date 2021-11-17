@@ -24,7 +24,7 @@ async leer(){
   
   await this.api.getDetallePosts(id);
   this.datos =  this.api.datos;
-  console.log(this.datos);
+ // console.log(this.datos);
 
   
 }
