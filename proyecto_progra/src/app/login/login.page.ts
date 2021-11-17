@@ -26,6 +26,7 @@ ngOnInit() {
 }
 async leer(dato:HTMLInputElement, password:HTMLInputElement)
 { 
+  
   //Validacion Bret
   if(dato.value == "Bret" && password.value == "1234"){
     const toast = await this.toastController.create({
@@ -42,17 +43,13 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
   console.log(this.datos)
 
 
-
   await this.api.getPost(id)
   this.datos =  this.api.datos;
   console.log(this.datos)
 
   this.router.navigateByUrl('listadoposts');
+
   
-
-
-
-
     }
 
     //Validacion Antonette 
@@ -69,6 +66,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Validacion Samantha
@@ -84,6 +87,13 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
+
     }
 
     //Karianne
@@ -99,6 +109,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Kamren
@@ -114,6 +130,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Leopoldo_Corkery
@@ -129,6 +151,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Elwyn.Skiles
@@ -144,6 +172,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Maxime_Nienow
@@ -159,6 +193,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Delphine
@@ -174,6 +214,12 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
     }
 
     //Validacion Moriah.Stanton
@@ -189,8 +235,18 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     this.datos =  this.api.datos;
     localStorage.setItem(dato.value,JSON.stringify(this.datos))
     console.log(this.datos)
+
+    await this.api.getPost(id)
+    this.datos =  this.api.datos;
+    console.log(this.datos)
+  
+    this.router.navigateByUrl('listadoposts');
+
+    
     }
 
+
+    
     //Validacion usuario sin dato
   else if(dato.value.trim().length == 0){
     const toast = await this.toastController.create({
@@ -238,6 +294,9 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
 
     }
 
+    //Borra lo escrito para el login 
+    dato.value=""
+    password.value=""
 }
 
 }

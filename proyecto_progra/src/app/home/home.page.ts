@@ -17,12 +17,12 @@ ngOnInit() {
 }
 async leer(){
   
-  let idposts ="";
+  let id ="";
   this.activatedRouter.paramMap.subscribe(async param => {
-    idposts = param.get('idposts');
+    id = param.get('id');
   })
   
-  await this.api.getPost(idposts);
+  await this.api.getDetallePosts(id);
   this.datos =  this.api.datos;
   console.log(this.datos);
 

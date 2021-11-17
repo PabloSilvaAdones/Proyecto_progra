@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Info Usuario</ion-title>
+    <ion-title>Post</ion-title>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="usuarios"></ion-back-button>
     </ion-buttons>
@@ -9,11 +9,13 @@
 
 <ion-content>
 <ion-text color="primary">
-  <div *ngIf="datos != null">
-    <h1>{{datos.id}}</h1>
-    <h1>{{datos.name}}</h1>
-    <h1>{{datos.username}}</h1>
-    <h1>{{datos.email}}</h1>
+  <div class="ion-text-center" *ngIf="datos != null">
+    <h1>{{datos.title}}</h1>
+    <hr>
+    <h3>{{datos.body}}</h3>
+    <hr>
+
+    
   </div>
 </ion-text>
 

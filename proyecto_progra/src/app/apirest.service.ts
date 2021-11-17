@@ -60,6 +60,24 @@ export class ApirestService {
       })
     })
   }
+
+
+
+  async getDetallePosts(idposts:String)
+  {
+    let url = this.apiURL + "posts/" + idposts;
+    return new Promise((resolve, reject) => {
+      this.http.get(url).subscribe((data: any) =>{
+        resolve(data);
+        this.datos = data;
+        console.log(url);
+      },
+      error =>
+      {
+        console.log("No se puede conectar");
+      })
+    })
+  }
 }
 
 
