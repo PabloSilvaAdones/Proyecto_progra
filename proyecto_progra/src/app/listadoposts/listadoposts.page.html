@@ -1,15 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>usuarios</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="menu"></ion-back-button>
-    </ion-buttons>
+    <ion-title>Posts</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div *ngIf="listadoposts.length > 0">
-    <h1 class="ion-text-center">Listado de Usuarios</h1>
+    <h1 class="ion-text-center">Posts</h1>
     
     <ion-list>
       <div *ngFor="let aux of listadoposts" [routerLink]="['../listadoposts/', aux.id]">
