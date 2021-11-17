@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
+import { RouterLinkDelegate, ToastController } from '@ionic/angular';
 import { ApirestService } from '../apirest.service';
+
 
 @Component({
   selector: 'app-login',
@@ -11,11 +12,14 @@ import { ApirestService } from '../apirest.service';
 export class LoginPage implements OnInit {
   datos: any
   user = "";
+  datoUsuario: any;
+  listadoposts:any[];
 
   constructor(
     private toastController: ToastController,
     private activatedRouter : ActivatedRoute, 
-              private api : ApirestService) { }
+              private api : ApirestService,
+              private router: Router) { }
 
 ngOnInit() {    
  // this.leer()
@@ -36,6 +40,19 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
   this.datos =  this.api.datos;
   localStorage.setItem(dato.value,JSON.stringify(this.datos))
   console.log(this.datos)
+
+
+
+  await this.api.getPost(id)
+  this.datos =  this.api.datos;
+  console.log(this.datos)
+
+  this.router.navigateByUrl('listadoposts');
+  
+
+
+
+
     }
 
     //Validacion Antonette 
@@ -222,6 +239,7 @@ async leer(dato:HTMLInputElement, password:HTMLInputElement)
     }
 
 }
+
 }
 
 /*

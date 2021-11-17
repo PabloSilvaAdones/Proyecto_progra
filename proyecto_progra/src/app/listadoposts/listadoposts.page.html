@@ -2,17 +2,17 @@
   <ion-toolbar>
     <ion-title>usuarios</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="login"></ion-back-button>
+      <ion-back-button defaultHref="menu"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div *ngIf="listadoUsuarios.length > 0">
+  <div *ngIf="listadoposts.length > 0">
     <h1 class="ion-text-center">Listado de Usuarios</h1>
     
     <ion-list>
-      <div *ngFor="let aux of listadoUsuarios" [routerLink]="['/', aux.id]">
+      <div *ngFor="let aux of listadoposts" [routerLink]="['../listadoposts/', aux.id]">
         
         <ion-item>
           
@@ -24,17 +24,13 @@
       </div>
     </ion-list>
   </div>
-  <ion-input type="text" placeholder="Awesome Input" #user></ion-input>
-  <ion-button (click)="leer()" expand="block" fill="clear" shape="round">
-    Click me
-  </ion-button>
-
 </ion-content>
 
 <ion-footer>
   <ion-toolbar>
-    <ion-button (click)="listar()" slot="end">
-      <ion-icon slot="icon-only" name="list"></ion-icon>
+    <ion-button (click)="salir()" expand="block" fill="clear" shape="round"
+    defaultHref="login">
+      log out
     </ion-button>
   </ion-toolbar>
 </ion-footer>

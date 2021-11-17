@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApirestService } from '../apirest.service';
 
 @Component({
@@ -9,28 +9,23 @@ import { ApirestService } from '../apirest.service';
 })
 export class HomePage implements OnInit {
   datos: any
-  user = "";
   constructor(private activatedRouter : ActivatedRoute, 
               private api : ApirestService) { }
 
 ngOnInit() {    
   this.leer()
 }
-async leer()
-{if (this.datos == this.datos)
-  {
+async leer(){
   
-  let id ="";
+  let idposts ="";
   this.activatedRouter.paramMap.subscribe(async param => {
-    id = param.get('id');
+    idposts = param.get('idposts');
   })
   
-  await this.api.getUser(id);
+  await this.api.getPost(idposts);
   this.datos =  this.api.datos;
-  localStorage.setItem(id,JSON.stringify(this.datos))
-  console.log(this.datos);}
-  
-  alert(this.datos.name)
+  console.log(this.datos);
 
+  
 }
 }

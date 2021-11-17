@@ -27,9 +27,9 @@ export class ApirestService {
     })
   }
 
-  async getUser(username:String)
+  async getUser(id:String)
   {
-    let url = this.apiURL + "users/" + username;
+    let url = this.apiURL + "users/" + id ;
     return new Promise((resolve, reject) => {
       this.http.get(url).subscribe((data: any) =>{
         resolve(data);
@@ -42,4 +42,24 @@ export class ApirestService {
       })
     })
   }
+
+
+
+  async getPost(idposts:String)
+  {
+    let url = this.apiURL + "users/" + idposts + "/posts";
+    return new Promise((resolve, reject) => {
+      this.http.get(url).subscribe((data: any) =>{
+        resolve(data);
+        this.datos = data;
+        console.log(url);
+      },
+      error =>
+      {
+        console.log("No se puede conectar");
+      })
+    })
+  }
 }
+
+
